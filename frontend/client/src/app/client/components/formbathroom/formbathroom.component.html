@@ -1,0 +1,33 @@
+<form
+  [formGroup]="bathroomForm"
+  (ngSubmit)="bathroomForm && onSubmit()"
+  #signUpStatus="ngForm"
+>
+  <!-- Surface au sol -->
+  <div class="firstStep" *ngIf="valueOfScale === 0">
+    <div>
+      <label>Surface au sol</label>
+      <input type="text" formControlName="length" />
+      <input type="text" formControlName="width" />
+    </div>
+    <label for="surface">Surface des murs</label>
+    <input type="text" id="surface" formControlName="surface" />
+  </div>
+
+  <!-- Mobiler à déposer -->
+  <div class="secondStep" *ngIf="valueOfScale === 1">
+    <h4>Avez-vous du mobilier à déposer dans la salle de bain ?</h4>
+    <div class="headerQuestion">
+      <label for="oui">Oui</label>
+      <input id="oui" type="checkbox" formControlName="furniture.yes" />
+      <label for="non">Non</label>
+      <input id="non" type="checkbox" formControlName="furniture.no" />
+    </div>
+    <div class="checkboxContent">
+      <div *ngFor="let key of ['WC', 'bath', 'italianShower', 'shower']">
+        <label for="{{ key }}">{{ key }}</label>
+        <input type="checkbox" [formControlName]="key" />
+      </div>
+    </div>
+  </div>
+</form>

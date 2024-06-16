@@ -1,0 +1,37 @@
+<div *ngFor="let user of users">
+  <p>
+    <span>{{ user.name }}</span
+    ><br />
+    <span>{{ user.email }}</span
+    ><br />
+    <span>{{ user.password }}</span
+    ><br />
+    <button (click)="onDelete(user)">Delete</button>
+    <!-- <button (click)="onEdit(user)">Edit</button> -->
+  </p>
+</div>
+
+<form #form="ngForm" (ngSubmit)="form.valid && onSubmit(userForm)">
+  <input
+    [(ngModel)]="userForm.name"
+    #name="ngModel"
+    name="name"
+    type="text"
+    placeholder="name"
+  />
+  <input
+    [(ngModel)]="userForm.email"
+    name="email"
+    #email="ngModel"
+    type="text"
+    placeholder="email"
+  />
+  <input
+    name="password"
+    [(ngModel)]="userForm.password"
+    #email="ngModel"
+    type="text"
+    placeholder="password"
+  />
+  <button type="submit">Submit</button>
+</form>

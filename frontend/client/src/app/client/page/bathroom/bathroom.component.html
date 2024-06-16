@@ -1,0 +1,43 @@
+<main>
+  <div class="headerChiffrage">
+    <h2>Chiffrage de votre salle de bain</h2>
+    <p>Obtenez une estimation précise de vos futurs travaux</p>
+  </div>
+  <section class="chiffrageContent">
+    <div class="PourcentageContentContainer">
+      <div class="leftPourcentageContent">
+        <div class="headerBathroomContentContainer">
+          <div class="headerBathroomContent">
+            <img
+              src="{{ bathroomData[0].img }}"
+              alt="image de {{ bathroomData[0].name }}"
+              width="110px"
+            />
+            <span class="headerBathroomText">{{ bathroomData[0].name }}</span>
+          </div>
+          <div class="percentRange">
+            <label for="percentRange">8%</label>
+            <input
+              type="range"
+              id="percentRange"
+              min="0"
+              max="100"
+              value="8"
+              style="width: 220px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rightContentContainer">
+      <div class="roundStep">
+        <span class="numberOfStep">1</span>
+        <div class="formContainerQestion">
+          <app-formbathroom [valueOfScale]="valueOfScale"></app-formbathroom>
+        </div>
+      </div>
+    </div>
+    <button (click)="onClick()">Continue</button>
+    <button (click)="onClickMoins()">Precedent</button>
+  </section>
+</main>

@@ -1,0 +1,68 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+.chiffrageContent {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+.leftPourcentageContent {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  position: relative;
+}
+.headerBathroomText {
+  margin-top: 15px;
+  font-size: medium;
+  font-weight: 600;
+}
+.headerBathroomContent {
+  display: flex;
+  justify-content: space-between;
+}
+.headerChiffrage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.rightContentContainer {
+  padding-left: 3rem;
+}
+.roundStep {
+  margin: 5px 15px;
+  padding: 10px;
+  background: rgb(119, 119, 206);
+  width: 25px;
+  border-radius: 55px;
+  height: 25px;
+  position: relative;
+}
+.numberOfStep {
+  position: absolute;
+  top: 14px;
+  left: 17px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+.leftPourcentageContent {
+  gap: 15px;
+}
+.percentRange {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 25px;
+}
+.percentRange label {
+  position: absolute;
+  top: -15px;
+  left: 15%;
+  transform: translateX(-50%);
+}
+.formContainerQestion {
+  display: flex;
+  padding-left: 5rem;
+}

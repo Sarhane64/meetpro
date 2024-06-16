@@ -1,0 +1,10 @@
+<main>
+  <div class="estimateCardContainer">
+    <p class="estimateCard" *ngFor="let estimate of cardData">
+      <span class="estimateImg"
+        ><img [src]="estimate.img" alt="image de {{ estimate.name }}"
+      /></span>
+      <span>{{ estimate.name }}</span>
+    </p>
+  </div>
+</main>

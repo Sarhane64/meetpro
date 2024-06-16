@@ -1,0 +1,13 @@
+<main>
+  <div>
+    <a [routerLink]="['/home/estimate/bathroom']">test</a>
+  </div>
+  <div class="estimateHeader">
+    <h1>Estimez vos travaux</h1>
+    <p>Selectionnez la prestation voulue</p>
+  </div>
+  <div class="typeOfTravaux">
+    <app-estimatecard [cardData]="estimateData"></app-estimatecard>
+  </div>
+</main>
+
